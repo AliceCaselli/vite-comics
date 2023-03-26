@@ -11,17 +11,28 @@ export default {
     return {};
   },
 
-  components:
+  components: {
     AppNavbar,
-  AppHeader,
-  AppSection,
-  AppFooter,
+    AppHeader,
+    AppSection,
+    AppFooter,
+  }
 
 }
 
 
 </script>
 
-<template></template>
+<template>
+  <AppNavbar></AppNavbar>
+  <AppHeader></AppHeader>
+  <AppSection></AppSection>
+  <AppFooter></AppFooter>
+</template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+template {
+  height: 100vh;
+  width: 100vw;
+}
+</style>
