@@ -16,7 +16,7 @@ export default {
                 },
 
                 {
-                    img: '/img/buy-comics-subscription.png',
+                    img: '/img/buy-comics-subscriptions.png',
                     text: 'SUBSCRIPTION'
                 },
 
@@ -26,7 +26,7 @@ export default {
                 },
 
                 {
-                    img: '/img/buy-dc-power-visa',
+                    img: '/img/buy-dc-power-visa.svg',
                     text: 'DC POWER VISA'
                 }
 
@@ -41,10 +41,11 @@ export default {
     <header>
 
         <div id="container-header">
-            <div id="card">
-                <img src="" alt="">
-                <span v-for="card in cards">{{ card.text }}</span>
-            </div>
+
+            <a v-for="card in cards" id="card" href="#">
+                <img :src="card.img" alt="">
+                <span>{{ card.text }}</span>
+            </a>
         </div>
     </header>
 </template>
@@ -52,7 +53,6 @@ export default {
 <style lang="scss" scoped>
 header {
     width: 100%;
-    height: 150px;
     background-color: #0282f9;
 
     #container-header {
@@ -60,6 +60,36 @@ header {
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
+
+        padding: 30px 0;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+
+            height: 45px;
+
+            img {
+                height: 100%;
+            }
+
+            span {
+                font-size: 0.7em;
+            }
+
+
+        }
     }
 }
 </style>

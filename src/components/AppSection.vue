@@ -19,6 +19,14 @@ export default {
                 },
 
                 {
+                    title: 'shop',
+                    links: [
+                        'shop DC',
+                        'shop DC collectibles'
+                    ]
+                },
+
+                {
                     title: 'dc',
                     links: [
                         'term of use',
@@ -46,13 +54,7 @@ export default {
                     ]
                 },
 
-                {
-                    title: 'shop',
-                    links: [
-                        'shop DC',
-                        'shop DC collectibles'
-                    ]
-                }
+
 
             ]
         };
@@ -102,10 +104,12 @@ export default {
         #list-container {
             width: 50%;
             display: flex;
-            flex-flow: row wrap;
+            flex-flow: column wrap;
             align-items: flex-start;
-            gap: 50px;
-            padding-top: 10px;
+
+            height: 400px;
+            gap: 25px;
+            padding-top: 50px;
 
             #lists {
 
@@ -118,7 +122,7 @@ export default {
                     strong {
                         text-transform: uppercase;
                         display: inline-block;
-                        margin-bottom: 15px;
+                        margin-bottom: 10px;
                     }
 
                     li {
@@ -136,6 +140,7 @@ export default {
 
             img {
                 height: 600px;
+                transform: translateY(-15%);
             }
 
         }

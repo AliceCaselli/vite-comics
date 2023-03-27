@@ -25,7 +25,7 @@ export default {
             <div id="icons-container">
                 <span>FOLLOW US</span>
                 <div id="icons">
-                    <img src="" alt="">
+                    <img v-for="image in images" :src="'/img/' + image" alt="">
                 </div>
             </div>
         </div>
@@ -52,15 +52,24 @@ footer {
             border: 2px solid #0282f9;
             color: white;
             font-weight: bold;
+            padding: 15px;
         }
 
         #icons-container {
             display: flex;
             flex-direction: row;
+            align-items: center;
+            gap: 30px;
 
             span {
                 color: #0282f9;
                 font-weight: bold;
+            }
+
+            #icons {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
             }
         }
     }
