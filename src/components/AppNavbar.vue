@@ -17,8 +17,20 @@ export default {
                 'shop'
 
             ],
+
+            activeIndex: -1,
         };
+
+
     },
+
+    methods: {
+        classActive(clickIndex) {
+
+            this.activeIndex = clickIndex;
+        }
+
+    }
 };
 
 </script>
@@ -32,7 +44,8 @@ export default {
             <nav>
 
                 <ul id="link-list">
-                    <li v-for="link in links">{{ link }}</li>
+                    <li v-for="(link, index) in links" @click="classActive(index)"
+                        :class="index == activeIndex ? 'active' : ''">{{ link }}</li>
                 </ul>
             </nav>
         </div>
@@ -65,17 +78,24 @@ export default {
     gap: 30px;
     list-style-type: none;
 
+    .active {
+
+        color: #0282f9;
+        border-bottom: 4px solid #0282f9;
+    }
+
 
     li {
         text-transform: uppercase;
         cursor: pointer;
         color: black;
         font-weight: bold;
-        border-bottom: 4px solid #0282f9;
 
         &:hover {
             color: #0282f9;
         }
+
+
     }
 }
 </style>

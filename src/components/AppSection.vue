@@ -112,6 +112,7 @@ export default {
             padding-top: 50px;
 
             #lists {
+                z-index: 2;
 
                 ul {
                     padding: 0;
