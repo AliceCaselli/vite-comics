@@ -67,7 +67,6 @@ export default {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
 }
 
 
@@ -90,6 +89,7 @@ export default {
         cursor: pointer;
         color: black;
         font-weight: bold;
+        padding: 50px 0;
 
         &:hover {
             color: #0282f9;
