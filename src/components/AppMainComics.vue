@@ -68,6 +68,7 @@ export default {
         .series {
             font-weight: bold;
             font-size: 1.1em;
+            text-align: center;
         }
     }
 }
