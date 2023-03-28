@@ -92,11 +92,10 @@ export default {
 <template>
     <div id="container-main">
         <div id="jumbo">
-
-            <div id="current-series">CURRENT SERIES</div>
         </div>
     </div>
     <div id="container-comics">
+        <div id="current-series">CURRENT SERIES</div>
 
         <AppMainComics v-for="comic in comics" :thumb="comic.thumb" :price="comic.price" :series="comic.series"
             :type="comic.type"></AppMainComics>
@@ -111,31 +110,15 @@ export default {
 #container-main {
 
     #jumbo {
-        position: relative;
 
         height: 400px;
         background-image: url(/img/jumbotron.jpg);
         background-repeat: no-repeat;
         background-size: cover;
 
-
-        #current-series {
-
-            position: absolute;
-            bottom: -30px;
-            left: 400px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #0282f9;
-            font-weight: bold;
-
-            font-size: 1.3em;
-            height: 60px;
-            width: 200px;
-        }
     }
+
+
 
 
 }
@@ -152,6 +135,26 @@ export default {
     padding: 50px 0;
 
     height: 750px;
+
+    position: relative;
+
+    #current-series {
+
+        position: absolute;
+        top: -30px;
+        left: -20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0282f9;
+        font-weight: bold;
+
+        font-size: 1.3em;
+        height: 60px;
+        width: 200px;
+    }
+
 }
 
 .btn {
